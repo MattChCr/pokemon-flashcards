@@ -2,14 +2,19 @@ import '../App.css'
 
 const FlashCard = (props) => {
 
-const [qside, setQSide] = useState(true);
+
+function flash() {
+    if (props.side % 2 == 0) {
+      return props.question;
+    }
+    return props.answer;
+  }
 
   return (
     <>
-      <div className="question-side" onClick={setQSide(!qside)}> 
-        
-           <h2> {qside ?  props.question : props.answer}   </h2>
-      </div>
+        <div>
+             <h2> {flash()} </h2>
+        </div>
     </>
   )
 }

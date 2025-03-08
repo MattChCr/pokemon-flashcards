@@ -20,9 +20,11 @@
   color:blanchedalmond;
 }
 
-.question-side {
+.card {
   background-color:cornflowerblue;
   padding: 60px;
   width: 40%;
   border-radius: 2em;
 }
+
+

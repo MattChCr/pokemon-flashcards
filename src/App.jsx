@@ -19,8 +19,19 @@ const App = () => {
   ]
   
   const [number, setNumber] = useState(0);
+  const [flip, setFlip] = useState(1);
   const randomQuestion = () => {
-    setNumber(Math.floor(Math.random() * 10) + 1);}
+    if (flip % 2 == 1) {
+      flipSide();
+    }
+    
+    setNumber(Math.floor(Math.random() * 10) + 1);
+  
+  };
+
+  const flipSide = () => {
+    setFlip(flip + 1);
+  };
 
   return (
     <>
@@ -29,8 +40,11 @@ const App = () => {
       <h3> Test how well you know what is the best strategy!</h3>
       <h4> Cards: 10</h4>
 
-      <FlashCard question={questions[number].q} answer={questions[number].a}/>
+      <div className="card" onClick={flipSide}>
+        <FlashCard question={questions[number].q} answer={questions[number].a} side={flip} />
+      </div>
       <h2 className="button" onClick={randomQuestion}> Next </h2> 
+
     </div>
 
     </>
