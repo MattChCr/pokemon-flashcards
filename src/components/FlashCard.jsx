@@ -13,6 +13,7 @@ function flash() {
   return (
     <>
         <div>
+             <img src= {props.icon} width= '25%'/>
              <h2> {flash()} </h2>
         </div>
     </>

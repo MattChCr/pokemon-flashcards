@@ -20,11 +20,33 @@
   color:blanchedalmond;
 }
 
-.card {
-  background-color:cornflowerblue;
+
+
+.intro{
   padding: 60px;
   width: 40%;
   border-radius: 2em;
+  background-color: #6495ed;
+}
+.easy {
+  padding: 60px;
+  width: 40%;
+  border-radius: 2em;
+  background-color: #9acd32;
+}
+
+.medium {
+  padding: 60px;
+  width: 40%;
+  border-radius: 2em;
+  background-color: #daa520;
+}
+
+.hard{
+  padding: 60px;
+  width: 40%;
+  border-radius: 2em;
+  background-color: #dc143c;
 }
 
 
