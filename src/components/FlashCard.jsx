@@ -8,13 +8,14 @@ function flash() {
       return props.question;
     }
     return props.answer;
-  }
+}
+
 
   return (
     <>
         <div>
-             <img src= {props.icon} width= '25%'/>
-             <h2> {flash()} </h2>
+             <img src= {props.icon} width='25%'/>
+             <h2 > {flash()} </h2>
         </div>
     </>
   )

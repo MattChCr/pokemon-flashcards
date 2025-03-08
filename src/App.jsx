@@ -25,7 +25,7 @@ const App = () => {
     if (flip % 2 == 1) {
       flipSide();
     }
-    
+
     setNumber(Math.floor(Math.random() * 10) + 1);
   
   };
@@ -34,12 +34,6 @@ const App = () => {
     setFlip(flip + 1);
   };
 
-  const colorDict = {
-    intro: '#6495ed',
-    easy: '#9acd32',
-    medium: '#daa520',
-    hard: '#dc143c',
-  };
 
   return (
     <>
@@ -48,12 +42,12 @@ const App = () => {
       <h3> Test how well you know what is the best strategy!</h3>
       <h4> Cards: 10</h4>
 
- 
-      <div className={questions[number].color} onClick={flipSide} >
-        <FlashCard question={questions[number].q} answer={questions[number].a} side={flip} icon={questions[number].img} />
-      </div>
-
       
+        <div className={questions[number].color} onClick={flipSide} >
+          <FlashCard question={questions[number].q} answer={questions[number].a} side={flip} icon={questions[number].img} />
+        </div>
+      
+  
       <h2 className="button" onClick={randomQuestion}> Next </h2> 
 
     </div>
